@@ -1,0 +1,25 @@
+﻿@model Test.Models.Car
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Автомобили</title>
+    <link type="text/css" href="~/styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="Main">
+        <div class="CarInfo">
+            @{
+                <h1>(@Model.Id) @Model.Mark @Model.Model</h1>
+                <img class="image" src="@Model.ImageUrl" />
+            }
+        </div>
+    </div>
+</body>
+</html>
+

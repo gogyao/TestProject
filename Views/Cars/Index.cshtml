@@ -1,0 +1,48 @@
+﻿
+@using Test.Models
+@model IEnumerable<Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Автомобили</title>
+    <link type="text/css" href="~/styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="Main">
+        <div>
+            <h1>Список автомобилей</h1>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Mark</th>
+                    <th>Model</th>
+                    <th>Weigth</th>
+                    <th></th>
+                </tr>
+                @{
+                    foreach (var car in Model)
+                    {
+                        <tr>
+                            <td>@car.Id</td>
+                            <td>@car.Mark</td>
+                            <td>@car.Model</td>
+                            <td>@car.Weight kg</td>
+                            <td>
+                                <button onclick="window.location.href='https://localhost:5000/api/cars/@car.Id'">Подробнее</button>
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
