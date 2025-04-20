@@ -29,3 +29,16 @@ th, td {
     align-items:center;
     flex-direction:column;
 }
+.link {
+    text-align:center;
+    background-color:white;
+    color:black;
+    text-decoration:none;
+    padding:5px;
+    border:1px solid black;
+    border-radius:7px;
+}
+.link:hover {
+    background-color:black;
+    color:white;
+}

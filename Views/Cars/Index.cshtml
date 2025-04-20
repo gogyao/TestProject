@@ -1,5 +1,4 @@
-﻿
-@using Test.Models
+﻿@using Test.Models
 @model IEnumerable<Car>
 
 @{
@@ -34,12 +33,11 @@
                             <td>@car.Model</td>
                             <td>@car.Weight kg</td>
                             <td>
-                                <button onclick="window.location.href='https://localhost:5000/api/cars/@car.Id'">Подробнее</button>
+                                <a class="link" href='@Url.Content("~/api/Cars/"+car.Id)'>Подробнее</a>
                             </td>
                         </tr>
                     }
                 }
-
             </table>
         </div>
     </div>
